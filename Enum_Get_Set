@@ -1,0 +1,18 @@
+class Enum_Get_Set{
+    public static void main(String args[]){
+        // Error a=Error.FAILED;
+        // System.out.println(a.getCode());
+        System.out.println(Error.SUCCESS.getCode());
+        System.out.println(Error.FAILED.getCode());
+    }
+}
+enum Error{
+    SUCCESS(200),FAILED(0),WAITING(100);
+    private int code;
+    Error(int code){
+        this.code=code;
+    }
+    public int getCode(){
+        return code;
+    }
+}
