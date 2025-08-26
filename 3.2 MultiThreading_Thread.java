@@ -1,5 +1,5 @@
 
-class 3.2 MultiThreading_Thread {
+class MultiThreading_Thread {
     public static void main(String[] args) {
         Employee t1=new Employee();
         Manager t2=new Manager();
