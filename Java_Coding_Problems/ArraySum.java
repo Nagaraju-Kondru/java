@@ -1,4 +1,4 @@
-// Online Java Compiler
+
 
 import java.util.*;
 class ArraySum {
