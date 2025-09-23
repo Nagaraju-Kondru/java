@@ -1,0 +1,40 @@
+class Array_LeftRight1_Rotate{
+    public static void main(String args[]){
+        int a[]={1,2,3,4,5};
+        int n=a.length;
+        int k=2;
+        if(k<0){   //for right rotation use negative values
+            k=k+n;
+        }
+        k=k%n;
+        
+        System.out.println("Original array");
+        for(int b:a){
+            System.out.print(b+" ");
+        }
+        System.out.println();
+        
+        
+        for(int start=0,end=n-1;start<end;start++,end--){  //reverse
+            int temp=a[start];
+            a[start]=a[end];
+            a[end]=temp;
+        }
+        for(int start=0,end=n-k-1;start<end;start++,end--){  
+            int temp=a[start];
+            a[start]=a[end];
+            a[end]=temp;  
+        }
+        for(int start=n-k,end=n-1;start<end;start++,end--){
+            int temp=a[start];
+            a[start]=a[end];
+            a[end]=temp;  
+        }
+        
+        
+        System.out.println("rotated array");
+        for(int b:a){
+            System.out.print(b+" ");
+        }
+    }
+}
